@@ -299,7 +299,6 @@ const App = () => {
                
                 {editing ? (
                     <div className="button-container">
-                        // This will call the updateDomain function we just made
                         <button className="cta-button mint-button" disabled={loading} onClick={updateDomain}>
                             Set record
                         </button>
