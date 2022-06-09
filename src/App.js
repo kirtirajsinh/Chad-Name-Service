@@ -1,11 +1,9 @@
 import "./App.css";
 import { ethers } from "ethers";
-// import ethLogo from "./assets/ethlogo.png";
 import { networks } from "./utils/networks";
 import contractAbi from "./utils/Domains.json";
 import React, { useEffect, useState } from "react";
-// import twitterLogo from "./assets/twitter-logo.svg";
-// import polygonLogo from "./assets/polygonlogo.png";
+
 
 const tld = ".chad";
 const CONTRACT_ADDRESS = "0xCBdc87294Ddc77Ad6544E275826c80aE6c4435eb";
@@ -298,14 +296,13 @@ const App = () => {
                 </div>
 
                 <input type="text" value={record} placeholder="whats ur ninja power?" onChange={(e) => setRecord(e.target.value)} />
-                {/* If the editing variable is true, return the "Set record" and "Cancel" button */}
+               
                 {editing ? (
                     <div className="button-container">
                         // This will call the updateDomain function we just made
                         <button className="cta-button mint-button" disabled={loading} onClick={updateDomain}>
                             Set record
                         </button>
-                        // This will let us get out of editing mode by setting editing to false
                         <button
                             className="cta-button mint-button"
                             onClick={() => {
